@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    var hello = "Hello, World!"
     var body: some View {
         VStack {
-            Text("Weather")
+            Text(hello)
                 .font(.largeTitle)
                 .fontWeight(.thin)
                 .foregroundStyle(.gray)
