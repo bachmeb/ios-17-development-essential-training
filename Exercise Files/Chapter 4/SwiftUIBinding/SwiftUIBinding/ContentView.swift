@@ -10,7 +10,11 @@ import SwiftUI
 struct ContentView: View {
     
     @State   var text = "Hello, world!"
+    
     @State var red: Double = 1.0
+    @State var green: Double = 0.0
+    @State var blue: Double = 0.0
+    
     var body: some View {
         VStack {
             TextField("Type your name", text: $text)
@@ -24,8 +28,11 @@ struct ContentView: View {
             Image(systemName: "dog.circle")
                 .resizable()
                 .frame(width: 100, height: 100)
-                .foregroundColor(Color(red: red, green: 0.0, blue: 0.0))
-            Slider(value: $red)
+                .foregroundColor(Color(red: red, green: green, blue: blue))
+        
+            ColorSliderView(colorValue: $red, color: .red)
+            ColorSliderView(colorValue: $green, color: .green)
+            ColorSliderView(colorValue: $blue, color: Color.blue)
         }
         .padding()
     }
