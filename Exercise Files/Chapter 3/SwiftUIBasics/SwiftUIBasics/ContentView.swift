@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    var hello = "Hello, World!"
+    @State var hello = "Hello, World!"
     var body: some View {
         VStack {
+            TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: $hello)
             Text(hello)
                 .font(.largeTitle)
                 .fontWeight(.thin)
