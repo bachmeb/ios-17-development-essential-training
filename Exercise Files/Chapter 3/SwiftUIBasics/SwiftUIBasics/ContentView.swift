@@ -21,6 +21,9 @@ struct ContentView: View {
                 Text("Sunday")
 
             }
+            Image("4571473")
+                .resizable()
+                .scaledToFit()
         }
         .padding()
     }
